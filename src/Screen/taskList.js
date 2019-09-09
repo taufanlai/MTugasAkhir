@@ -14,7 +14,7 @@ import {
 
   import Daftar from '../Compponent/daftar';
 
-  const TaskList = ()=>{
+  const TaskList = ({navigation})=>{
     let json = [{
           id: 1,
           Type: 'Cuti',
@@ -33,7 +33,7 @@ import {
         }, {
           id: 4,
           Type: 'Cuti',
-          title: 'Kelas 4', 
+          Requester: 'Taufan4',
           Description: 'Cuti Keluar Negeri4'
 
       },{
@@ -56,11 +56,22 @@ import {
         Type: 'Cuti',
         Requester: 'Taufan8',
         Description: 'Cuti Keluar Negeri8'
+    },{
+        id: 9,
+        Type: 'Cuti',
+        Requester: 'Taufan9',
+        Description: 'Cuti Keluar Negeri9'
+    }, {
+        id: 10,
+        Type: 'Cuti',
+        Requester: 'Taufan10',
+        Description: 'Cuti Keluar Negeri10'
     }]
 
     return (
         <View>
-            <Daftar data={json}/>
+            <Daftar data={json}
+            navigation={navigation}/>
         </View>
     );
 
